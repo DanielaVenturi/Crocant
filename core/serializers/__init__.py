@@ -1,4 +1,6 @@
 from .user import UserSerializer
 from .produto import ProdutoSerializer
-from.categoria import CategoriaSerializer
+from .categoria import CategoriaSerializer
+from .estado import EstadoSerializer
+from.cidade import CidadeSerializer
 

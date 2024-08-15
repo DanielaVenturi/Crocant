@@ -1,9 +1,9 @@
 from rest_framework.serializers import ModelSerializer
 
-from core.models import Estado
+from core.models import Cidade
 
 
-class EstadoSerializer(ModelSerializer):
+class CidadeSerializer(ModelSerializer):
     class Meta:
-        model = Estado
+        model = Cidade
         fields = "__all__"
