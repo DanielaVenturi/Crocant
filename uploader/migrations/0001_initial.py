@@ -36,6 +36,7 @@ class Migration(migrations.Migration):
                 ("file", models.FileField(upload_to=uploader.models.document.document_file_path)),
                 ("description", models.CharField(blank=True, max_length=255)),
                 ("uploaded_on", models.DateTimeField(auto_now_add=True)),
+                
             ],
         ),
         migrations.CreateModel(
@@ -63,4 +64,5 @@ class Migration(migrations.Migration):
                 ("uploaded_on", models.DateTimeField(auto_now_add=True)),
             ],
         ),
+        
     ]
