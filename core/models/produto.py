@@ -21,7 +21,7 @@ class Produto(models.Model):
     descricao = models.CharField(max_length=100)
     tamanho = models.PositiveIntegerField(choices=TAMANHOS_CHOICES, null=True, blank=True)
     preco = models.DecimalField(max_digits=7, decimal_places=2, default=0, null=True, blank=True)
-    categoria = models.ManyToManyField(Categoria, related_name="produto", blank=True, null=True)
+    categoria = models.ManyToManyField(Categoria, related_name="produto", blank=True)
     capa = models.ForeignKey(
         Image,
         related_name="+",

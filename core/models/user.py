@@ -8,6 +8,7 @@ from django.contrib.auth.models import (
     PermissionsMixin,
 )
 from django.db import models
+from uploader.models import Image
 
 
 
@@ -45,6 +46,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
+    foto = models.ForeignKey(
+        Image,
+        related_name="user_capa",
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        default=None,
+    )
 
     objects = UserManager()
 
@@ -56,3 +65,4 @@ class User(AbstractBaseUser, PermissionsMixin):
 
         verbose_name = "Usuário"
         verbose_name_plural = "Usuários"
+
