@@ -40,23 +40,25 @@ class TokenAuthentication(authentication.BaseAuthentication):
 
         return (user, None)
 
-    def _get_or_create_user(self, psg_user_id) -> User:
-        try:
-            user: User = User.objects.get(passage_id=psg_user_id)
-        except ObjectDoesNotExist:
-            psg_user = psg.getUser(psg_user_id)
-            user: User = User.objects.create_user(
-                passage_id=psg_user.id,
-                email=psg_user.email,
-            )
+def _get_or_create_user(self, psg_user_id) -> User:
+    try:
+        user: User = User.objects.get(passage_id=psg_user_id)
+    except ObjectDoesNotExist:
+        psg_user = psg.getUser(psg_user_id)
+        user: User = User.objects.create_user(
+            passage_id=psg_user.id,
+            email=psg_user.email,
+        )
+        print(f"Usuário criado: {user.passage_id}")  # Debug
 
-        return user
+    return user
 
-    def _get_user_id(self, request) -> str:
-        try:
-            psg_user_id: str = psg.authenticateRequest(request)
-        except PassageError as e:
-            # print(e)
-            raise AuthenticationFailed(e.message) from e
+def _get_user_id(self, request) -> str:
+    try:
+        psg_user_id: str = psg.authenticateRequest(request)
+        print(f"Authenticated user ID: {psg_user_id}")  # Debug
+    except PassageError as e:
+        print(f"Authentication failed: {e.message}")  # Debug
+        raise AuthenticationFailed(e.message) from e
 
-        return psg_user_id
+    return psg_user_id
