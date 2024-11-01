@@ -5,3 +5,4 @@ from .estado import Estado
 from .cidade import Cidade
 from.endereco import Endereco
 from .pedido import Pedido
+from .compra import Compra
