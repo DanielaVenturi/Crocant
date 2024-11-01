@@ -10,7 +10,7 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from uploader.router import router as uploader_router
 
-from core.views import UserViewSet, ProdutoViewSet, CategoriaViewSet, EstadoViewSet, CidadeViewSet, EnderecoViewSet, PedidoViewSet
+from core.views import UserViewSet, ProdutoViewSet, CategoriaViewSet,CompraViewSet, EstadoViewSet, CidadeViewSet, EnderecoViewSet, PedidoViewSet
 
 router = DefaultRouter()
 
@@ -21,6 +21,7 @@ router.register(r"estados", EstadoViewSet, basename="estados")
 router.register(r"cidades", CidadeViewSet, basename="cidades")
 router.register(r"enderecos", EnderecoViewSet, basename="enderecos")
 router.register(r"pedidos", PedidoViewSet, basename="pedidos")
+router.register(r"compras", CompraViewSet, basename="compras")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
