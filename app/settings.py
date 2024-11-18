@@ -143,9 +143,10 @@ SIMPLE_JWT = {
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "<PROJETO> API",
-    "DESCRIPTION": "API para o projeto <descreva aqui seu projeto>.",
+    "TITLE": "Crocant",
+    "DESCRIPTION": "descrição",
     "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
 }
 
 AUTH_USER_MODEL = "core.User"
