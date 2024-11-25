@@ -6,3 +6,4 @@ from .cidade import CidadeSerializer
 from .endereco import EnderecoSerializer
 from .pedido import PedidoSerializer
 from .compra import CompraSerializer
+

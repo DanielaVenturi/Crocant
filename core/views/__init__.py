@@ -6,3 +6,4 @@ from .cidade import CidadeViewSet
 from .endereco import EnderecoViewSet
 from .pedido import PedidoViewSet
 from .compra import CompraViewSet
+# from .compra import CategoriaListView

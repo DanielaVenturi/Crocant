@@ -24,6 +24,7 @@ router.register(r"enderecos", EnderecoViewSet, basename="enderecos")
 router.register(r"pedidos", PedidoViewSet, basename="pedidos")
 router.register(r"compras", CompraViewSet, basename="compras")
 
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
