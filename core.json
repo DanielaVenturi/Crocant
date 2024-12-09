@@ -1,0 +1,208 @@
+[
+{
+  "model": "core.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$emkqntSlUgSYDSzfhJugJN$9FI7JGhcdNTK36YOyKMj00kG+Ao5jCYT3vn/mK/yLaU=",
+    "last_login": "2024-12-09T17:49:59.390Z",
+    "is_superuser": true,
+    "passage_id": "324321544235435",
+    "email": "a@a.com",
+    "name": "Superusuário",
+    "is_active": true,
+    "is_staff": true,
+    "foto": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$VWVkjP8yGcbKVcVJ7QwR9n$wZiKvlbBBZgUnl3T+Eu0DV9cAbya2Sp50izHCU/un3E=",
+    "last_login": null,
+    "is_superuser": true,
+    "passage_id": "danielalinda123",
+    "email": "danielaventuri14@gmail.com",
+    "name": "Daniela",
+    "is_active": true,
+    "is_staff": false,
+    "foto": null,
+    "groups": [
+    ],
+    "user_permissions": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      12,
+      5,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      29,
+      30,
+      31,
+      32,
+      25,
+      26,
+      27,
+      28,
+      21,
+      22,
+      23,
+      24,
+      17,
+      18,
+      19,
+      20
+    ]
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 1,
+  "fields": {
+    "nome": "Clogs"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 2,
+  "fields": {
+    "nome": "Plataformas"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 3,
+  "fields": {
+    "nome": "Sandálias"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 4,
+  "fields": {
+    "nome": "Chinelos"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 5,
+  "fields": {
+    "nome": "Botas"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 6,
+  "fields": {
+    "nome": "Slides"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 7,
+  "fields": {
+    "nome": "Tẽnis"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 8,
+  "fields": {
+    "nome": "tendencias"
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 1,
+  "fields": {
+    "nome": "Crocs",
+    "descricao": "muito legal",
+    "tamanho": null,
+    "preco": "10.99",
+    "capa": null,
+    "categoria": [
+      1
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 2,
+  "fields": {
+    "nome": "Sandalia",
+    "descricao": "muito confortável",
+    "tamanho": null,
+    "preco": "299.90",
+    "capa": null,
+    "categoria": [
+      3
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 3,
+  "fields": {
+    "nome": "Sapato",
+    "descricao": "fechao",
+    "tamanho": null,
+    "preco": "599.90",
+    "capa": null,
+    "categoria": [
+      7
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 4,
+  "fields": {
+    "nome": "aaaaaaaaaaaa",
+    "descricao": "Aston Martin.",
+    "tamanho": 35,
+    "preco": "0.00",
+    "capa": null,
+    "categoria": [
+      1
+    ]
+  }
+},
+{
+  "model": "core.estado",
+  "pk": 1,
+  "fields": {
+    "nome": "Santa Catarina",
+    "sigla": "sc"
+  }
+},
+{
+  "model": "core.cidade",
+  "pk": 1,
+  "fields": {
+    "nome": "Joinville",
+    "estado": 1
+  }
+},
+{
+  "model": "core.endereco",
+  "pk": 1,
+  "fields": {
+    "rua": "giovanni cattoni",
+    "cep": 80288,
+    "cidade": 1,
+    "user": null
+  }
+}
+]
