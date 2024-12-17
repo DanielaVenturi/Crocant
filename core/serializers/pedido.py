@@ -7,3 +7,9 @@ class PedidoSerializer(ModelSerializer):
     class Meta:
         model = Pedido
         fields = "__all__"
+        depth = 2
+
+class PedidoWriteSerializer(ModelSerializer):
+    class Meta:
+        model = Pedido
+        fields = ["produto", "data"]

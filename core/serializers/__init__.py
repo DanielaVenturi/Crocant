@@ -4,6 +4,6 @@ from .categoria import CategoriaSerializer
 from .estado import EstadoSerializer
 from .cidade import CidadeSerializer
 from .endereco import EnderecoSerializer
-from .pedido import PedidoSerializer
+from .pedido import PedidoSerializer, PedidoWriteSerializer
 from .compra import CompraSerializer
 

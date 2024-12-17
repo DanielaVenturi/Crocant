@@ -1,7 +1,7 @@
 from django.db import models
 from .produto import Produto
 
-class Pedido(models.Model):  
+class Pedido(models.Model):
     data = models.DateField(auto_now_add=True)
     produto = models.ManyToManyField(Produto, related_name="pedidos", blank=True)
 
